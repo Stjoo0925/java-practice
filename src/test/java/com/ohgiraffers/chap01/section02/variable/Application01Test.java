@@ -1,4 +1,4 @@
-package com.ohgiraffers.chap01.section01.literal;
+package com.ohgiraffers.chap01.section02.variable;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -7,14 +7,12 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class Application01Test {
 
-
     @Test
-    @DisplayName("literal 테스트")
-    void literal(){
+    @DisplayName("변수 테스트")
+    void variable(){
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outputStream);
 
@@ -26,6 +24,6 @@ class Application01Test {
 
 
         String capturedOutput = outputStream.toString().trim();
-        Assertions.assertEquals("즐거운 자바", capturedOutput);
+        Assertions.assertEquals(10, Integer.parseInt(capturedOutput));
     }
 }
